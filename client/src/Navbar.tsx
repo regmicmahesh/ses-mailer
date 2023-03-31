@@ -7,7 +7,7 @@ export const Navbar = () => {
             <ul class="nav-list">
                 <A href="/" class="nav-link"> Home </A>
                 <A href="/mail" class="nav-link">Mail Management</A>
-                <A href="/template" class="nav-link active">Template Management</A>
+                <A href="/template" class="nav-link">Template Management</A>
             </ul>
         </nav>
     );
