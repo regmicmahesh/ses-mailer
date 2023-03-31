@@ -1,7 +1,8 @@
+
 export const HomePage = () => {
   return (
-    <div>
+    <section class="homepage">
       <h1> Welcome to the SES utility software. </h1>
-    </div>
+    </section>
   );
 };

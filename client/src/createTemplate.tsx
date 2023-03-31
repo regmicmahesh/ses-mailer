@@ -1,3 +1,5 @@
+import "../src/styles/TemplateManagement.css";
+import "../src/styles/sendMail.css";
 import { createEffect, createSignal, For } from "solid-js";
 
 export const TemplateManagement = () => {
@@ -16,58 +18,51 @@ export const TemplateManagement = () => {
     }, [templates]);
 
     return (
-        <div>
-            <h1>Template Management Page</h1>
+        <main class="template-page">
+            <section class="form-container2">
+                <h1>Template Management Page</h1>
 
-            <hr />
+                <form onsubmit={submitForm}>
+                    <div class="create-template">Create Template </div>
+                    <div>
+                        <div>HTML Template:</div>
+                        <textarea
+                            value={htmlBody()}
+                            class="textarea"
+                            onInput={(e) => setHtmlBody(e.target.value)}
+                        />
+                    </div>
 
-            <form onsubmit={submitForm}>
-                <h2>Create Template </h2>
-                <div>
-                    HTML Template: <br />
-                    <textarea
-                        value={htmlBody()}
-                        onInput={(e) => setHtmlBody(e.target.value)}
-                    />
-                </div>
+                    <label>
+                        <div>Subject:</div>
+                        <input
+                            type="text"
+                            value={subject()}
+                            onInput={(e) => setSubject(e.target.value)}
+                        />
+                    </label>
 
-                <div>
-                    Subject: <br />
-                    <input
-                        type="text"
-                        value={subject()}
-                        onInput={(e) => setSubject(e.target.value)}
-                    />
-                </div>
+                    <label>
+                        <div>Template Name:</div>
+                        <input
+                            type="text"
+                            value={templateName()}
+                            onInput={(e) => setTemplateName(e.target.value)}
+                        />
+                    </label>
 
-                <div>
-                    Template Name: <br />
-                    <input
-                        type="text"
-                        value={templateName()}
-                        onInput={(e) => setTemplateName(e.target.value)}
-                    />
-                </div>
+                    <input class="btn" type="submit" value="Submit" />
+                </form>
+            </section>
+            <section class="template-list">
+                <h2>Templates</h2>
 
-                <input type="submit" value="Submit" />
-            </form>
-
-            <hr />
-
-            <h2>Templates</h2>
-
-
-            <ul>
-                <For each={templates()}>{
-
-                    (template) => <li>{template}</li>
-                }</For>
-
+                <ul>
+                    <For each={templates()}>
+                        {(template) => <li>{template}</li>}
+                    </For>
                 </ul>
-
-
-
-
-        </div>
+            </section>
+        </main>
     );
 };

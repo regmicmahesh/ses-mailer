@@ -1,0 +1,15 @@
+.template-list {
+    border: 2px solid red;
+    margin: 1rem;
+    align-self: center;
+    min-width: 350px;
+}
+.template-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+.form-container {
+    flex: 1;
+}

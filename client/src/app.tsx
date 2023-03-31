@@ -1,3 +1,4 @@
+import "./styles/index.css";
 import { Router, Routes, Route } from "@solidjs/router";
 import { TemplateManagement } from "./createTemplate";
 import { HomePage } from "./homePage";
