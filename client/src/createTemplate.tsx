@@ -19,19 +19,20 @@ export const TemplateManagement = () => {
 
     return (
         <main class="template-page">
-            <section class="form-container2">
+            <section class="form-container">
                 <h1>Template Management Page</h1>
 
                 <form onsubmit={submitForm}>
-                    <div class="create-template">Create Template </div>
-                    <div>
-                        <div>HTML Template:</div>
-                        <textarea
-                            value={htmlBody()}
-                            class="textarea"
-                            onInput={(e) => setHtmlBody(e.target.value)}
-                        />
-                    </div>
+                    <label>
+                        <div class="create-template">Create HTML Template </div>
+                        <div>
+                            <textarea
+                                value={htmlBody()}
+                                class="textarea"
+                                onInput={(e) => setHtmlBody(e.target.value)}
+                            />
+                        </div>
+                    </label>
 
                     <label>
                         <div>Subject:</div>
@@ -54,13 +55,73 @@ export const TemplateManagement = () => {
                     <input class="btn" type="submit" value="Submit" />
                 </form>
             </section>
-            <section class="template-list">
+            <section class="template-list-container">
                 <h2>Templates</h2>
 
-                <ul>
-                    <For each={templates()}>
+                <ul class="template-list">
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    <li>Hi, I am Abhishek</li>
+                    {/* <For each={templates()}>
                         {(template) => <li>{template}</li>}
-                    </For>
+                    </For> */}
                 </ul>
             </section>
         </main>

@@ -1,9 +1,21 @@
-.template-list {
-    border: 2px solid red;
+.template-list-container {
+    border: 2px solid gray;
     margin: 1rem;
+    padding: 0.5rem;
     align-self: center;
     min-width: 350px;
 }
+
+.template-list {
+	max-height: 500px;
+	overflow: scroll;
+
+}
+
+.template-list-container > h2 {
+	margin-bottom: 0.5rem;
+}
+
 .template-page {
     display: flex;
     flex-direction: row;
@@ -11,5 +23,9 @@
     gap: 2rem;
 }
 .form-container {
+    max-width: 600px;
     flex: 1;
+}
+.template-list > li {
+    margin-block: 0.5rem;
 }

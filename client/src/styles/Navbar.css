@@ -5,18 +5,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* -------testing--------- */
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
-    /* -------testing--------- */
 }
-main {
-	/* margin-top: 64px; */
-}
-
 .nav-list {
     display: flex;
     gap: 3rem;

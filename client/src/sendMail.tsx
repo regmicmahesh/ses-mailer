@@ -74,54 +74,58 @@ export const MailManagement = () => {
 
     return (
         <main class="mail-management-page">
-            <section class="form-container">
-                <h1>Mail Management Page</h1>
+            <div class="mail-management-container flex-center flex-column">
+                <section class="form-container">
+                    <h1>Mail Management Page</h1>
 
-                <form onsubmit={sendMail} class="mail-management-form">
-                    <label>
-                        <div>Sender</div>
-                        <input type="text" />
-                    </label>
+                    <form onsubmit={sendMail} class="mail-management-form">
+                        <label>
+                            <div>Sender</div>
+                            <input type="text" />
+                        </label>
 
-                    <label>
-                        <div>Template Name:</div>
-                        <input type="text" />
-                    </label>
+                        <label>
+                            <div>Template Name:</div>
+                            <input type="text" />
+                        </label>
 
-                    <div>Recipient List (CSV Only Accepted):</div>
-                    <label class="input-file-label">
-                        {/* <div>Enter .csv file here</div> */}
+                        <div>Recipient List (CSV Only Accepted):</div>
+                        <label class="input-file-label">
+                            {/* <div>Enter .csv file here</div> */}
+                            <input
+                                type="file"
+                                accept=".csv"
+                                onChange={onCsvSubmit}
+                                class="input-file"
+                            />
+                        </label>
+
+                        {variables().length > 0 && (
+                            <>
+                                <div>
+                                    Receiver Email Column: <br />
+                                    <select onchange={onChangeReceiverColumn}>
+                                        <For each={variables()}>
+                                            {(variable) => (
+                                                <option value={variable}>
+                                                    {variable}
+                                                </option>
+                                            )}
+                                        </For>
+                                    </select>
+                                </div>
+                            </>
+                        )}
+
                         <input
-                            type="file"
-                            accept=".csv"
-                            onChange={onCsvSubmit}
-                            class="input-file"
+                            type="submit"
+                            value="Send"
+                            class="btn btn-send"
                         />
-                    </label>
-
-                    {variables().length > 0 && (
-                        <>
-                            <div>
-                                Receiver Email Column: <br />
-                                <select onchange={onChangeReceiverColumn}>
-                                    <For each={variables()}>
-                                        {(variable) => (
-                                            <option value={variable}>
-                                                {variable}
-                                            </option>
-                                        )}
-                                    </For>
-                                </select>
-                            </div>
-                        </>
-                    )}
-
-                    <input type="submit" value="Send" class="btn btn-send" />
-                </form>
-            </section>
-            <div>
+                    </form>
+                </section>
                 <section>
-                    <table border={1} class="the-table">
+                    <table class="the-table">
                         <thead>
                             <tr>
                                 <For each={variables()}>
